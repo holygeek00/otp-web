@@ -47,7 +47,7 @@ const OtpDisplay = () => {
   const fetchOtp = async () => {
     try {
       // Replace with the correct URL to your FastAPI backend
-      const response = await axios.post('http://142.171.175.29:8000/generate-otp/', { secret_key: secretKey })
+      const response = await axios.post('http://142.171.175.29:8000/generate-otp', { secret_key: secretKey })
       setOtp(response.data.otp)
       setRemainingTime(response.data.remaining_time)
     } catch (error) {
